@@ -1,0 +1,39 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/custom-hello-world/editor.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+.wp-block-viewsource-custom-hello-world {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  background: #6fbcac;
+}
+.wp-block-viewsource-custom-hello-world h3 {
+  margin: 0;
+}
+.wp-block-viewsource-custom-hello-world .hello-world-image {
+  position: relative;
+}
+.wp-block-viewsource-custom-hello-world .hello-world-image:hover, .wp-block-viewsource-custom-hello-world .hello-world-image:focus {
+  cursor: pointer;
+}
+.wp-block-viewsource-custom-hello-world .hello-world-image button {
+  border: none;
+  padding: 0;
+  display: block;
+}
+
+.wp-block-viewsource-custom-hello-world .hello-world-image {
+  flex-basis: 50%;
+  margin-bottom: 0;
+}
+.wp-block-viewsource-custom-hello-world .hello-world-image img {
+  display: block;
+}
+.wp-block-viewsource-custom-hello-world .hello-world-image figcaption {
+  display: none;
+}
+.wp-block-viewsource-custom-hello-world .hello-world-image .components-resizable-box__container {
+  display: block;
+}
+
+/*# sourceMappingURL=index.css.map*/

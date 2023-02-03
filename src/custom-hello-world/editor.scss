@@ -3,7 +3,9 @@
 	gap: 1em;
 	align-items: center;
 	background: #6fbcac;
-
+	h3 {
+		margin: 0;
+	}
 	.hello-world-image {
 		position: relative;
 		&:hover,
