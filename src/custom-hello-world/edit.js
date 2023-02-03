@@ -11,25 +11,7 @@ import { __ } from "@wordpress/i18n";
  *
  * @see https://developer.wordpress.org/block-editor/packages/packages-block-editor/#useBlockProps
  */
-import {
-	useBlockProps,
-	InnerBlocks,
-	BlockControls,
-	// __experimentalUseInnerBlocksProps as useInnerBlocksProps,
-	useInnerBlocksProps,
-	store as blockEditorStore,
-	InspectorControls,
-	useSetting,
-	BlockVerticalAlignmentToolbar,
-	RichText,
-	MediaUpload,
-} from "@wordpress/block-editor";
-import {
-	PanelBody,
-	PanelRow,
-	__experimentalUnitControl as UnitControl,
-} from "@wordpress/components";
-import { useSelect } from "@wordpress/data";
+import { useBlockProps, RichText, MediaUpload } from "@wordpress/block-editor";
 import { useState } from "@wordpress/element";
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
