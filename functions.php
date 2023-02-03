@@ -16,7 +16,7 @@ function register_acf_blocks() {
 add_action( 'init', 'register_acf_blocks' );
 
 /**
- * Register a native block
+ * Register native blocks
  *
  * @return void
  */
