@@ -1,0 +1,19 @@
+{
+	"apiVersion": 2,
+	"name": "viewsource/native-hello-world",
+	"title": "Native Hello World",
+	"icon": "admin-comments",
+	"category": "text",
+	"description": "A native block",
+	"textdomain": "viewsource",
+	"supports": {
+		"html": false,
+		"align": [ "full"],
+		"color": {
+            "background": true
+        }
+	},
+	"editorScript": "file:index.js",
+	"editorStyle": "file:index.css",
+	"style": "file:style-index.css"
+}

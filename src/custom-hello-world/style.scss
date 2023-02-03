@@ -1,0 +1,22 @@
+.wp-block-viewsource-custom-hello-world {
+	display: flex;
+	gap: 1em;
+	align-items: center;
+	/* border: 2px solid #2c757b; */
+	background: #6fbcac;
+	/* padding: 1rem; */
+
+}
+
+.wp-block-viewsource-custom-hello-world .hello-world-image {
+	img {
+		display: block;
+		width: 100%;
+	}
+	flex-basis: 50%;
+	margin-bottom: 0;
+	figcaption { display: none; }
+	.components-resizable-box__container {
+		display: block;
+	}
+}

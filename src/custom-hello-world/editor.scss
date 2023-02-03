@@ -1,0 +1,35 @@
+.wp-block-viewsource-custom-hello-world {
+	display: flex;
+	gap: 1em;
+	align-items: center;
+	background: #6fbcac;
+
+	.hello-world-image {
+		position: relative;
+		&:hover,
+		&:focus {
+			cursor: pointer;
+		}
+
+		// make the button invisible
+		button {
+			border: none;
+			padding: 0;
+			display: block;
+		}
+
+	}
+
+}
+
+.wp-block-viewsource-custom-hello-world .hello-world-image {
+	img {
+		display: block;
+	}
+	flex-basis: 50%;
+	margin-bottom: 0;
+	figcaption { display: none; }
+	.components-resizable-box__container {
+		display: block;
+	}
+}

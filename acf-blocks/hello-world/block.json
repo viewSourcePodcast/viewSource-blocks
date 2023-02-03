@@ -1,0 +1,21 @@
+{
+    "name": "viewsource/helloworld",
+    "title": "ACF Hello World",
+    "description": "An ACF Block.",
+    "style": [ "file:./helloworld.css" ],
+    "category": "text",
+    "icon": "admin-comments",
+    "keywords": ["viewsource", "hello"],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "helloworld.php"
+    },
+	"supports": {
+		"html": false,
+		"align": [ "full"],
+		"color": {
+            "text": true,
+            "background": true
+        }
+	}
+}

@@ -1,0 +1,17 @@
+.hello-world-block {
+	display: flex;
+	gap: 1em;
+	align-items: center;
+	background: #6fbcac;
+}
+
+.hello-world-block img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.hello-world-block .hello-world-image {
+	flex-basis: 50%;
+}
