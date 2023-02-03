@@ -70,7 +70,7 @@ export default function Edit(props) {
 				<RichText
 					className="custom-hello-world-text"
 					tagName="h3"
-					placeholder="Enter text.."
+					placeholder={__("Enter text..", "viewsource-blocks")}
 					value={heading}
 					onChange={setHeadingContent}
 				/>
