@@ -1,10 +1,11 @@
 .wp-block-viewsource-custom-hello-world {
 	display: flex;
 	gap: 1em;
-	align-items: center;
+	// align-items: center;
 	background: #6fbcac;
 	h3 {
 		margin: 0;
+		align-self: center;
 	}
 	.hello-world-image {
 		position: relative;

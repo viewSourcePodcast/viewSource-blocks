@@ -1,8 +1,13 @@
 .hello-world-block {
 	display: flex;
 	gap: 1em;
-	align-items: center;
+	/* align-items: center; */
 	background: #6fbcac;
+}
+
+.hello-world-block .hello-world-text {
+	margin: 1em 0;
+	align-self: center;
 }
 
 .hello-world-block img {
