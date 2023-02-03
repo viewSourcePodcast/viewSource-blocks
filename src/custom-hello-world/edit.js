@@ -34,18 +34,23 @@ export default function Edit(props) {
 	const blockProps = useBlockProps();
 	const [heading, setHeading] = useState(attributes.content);
 
+	// Set default background color
 	if (!attributes.backgroundColor) {
 		setAttributes({ backgroundColor: "secondary" });
 	}
+
+	// Set default text color
 	if (!attributes.textColor) {
 		setAttributes({ textColor: "tertiary" });
 	}
 
+	// set the heading text
 	function setHeadingContent(content) {
 		setAttributes({ content: content });
 		setHeading(content);
 	}
 
+	// set the image
 	function selectImage(value) {
 		setAttributes({
 			imgUrl: value.sizes.full.url,
