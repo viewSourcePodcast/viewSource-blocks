@@ -1,6 +1,6 @@
 # viewSource-blocks
 
-This repo is part of an upcoming episode of viewSource! [Subscribe to listen (or watch!)](https://viewsource.fm). :)
+This repo is part of ~~an upcoming~~ two episodes of viewSource! [Listen (or watch!) here](https://viewsource.fm). :)
 
 You'll need Advanced Custom Fields Pro installed to be able to see the ACF Block.
 
