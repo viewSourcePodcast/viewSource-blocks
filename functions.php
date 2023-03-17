@@ -32,3 +32,26 @@ function register_native_blocks() {
 	register_block_type( __DIR__ . '/build/custom-hello-world' );
 }
 add_action( 'init', 'register_native_blocks' );
+
+
+/**
+ * Enqueue a script to the frontend of WordPress
+ *
+ * @return void
+ */
+function vs_add_accordion_scripts() {
+
+	$asset_file = include get_stylesheet_directory() . '/build/accordion/index.asset.php';
+	$dependencies = $asset_file['dependencies'];
+	wp_enqueue_script(
+		'vs-accordion-script',
+		get_stylesheet_directory_uri() . '/build/accordion/index.js',
+		$dependencies,
+		$asset_file['version'],
+		true,
+	);
+
+	wp_enqueue_style( 'riwdemo-styles', get_stylesheet_directory_uri() . '/build/accordion/style-index.css', false, $asset_file['version'] );
+
+}
+add_action( 'wp_enqueue_scripts', 'vs_add_accordion_scripts' );

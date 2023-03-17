@@ -1,0 +1,12 @@
+{
+	"apiVersion": 2,
+	"name": "viewsource/accordion",
+	"title": "Accordion",
+	"category": "text",
+	"icon": "admin-comments",
+	"description": "A native accordion block",
+	"textdomain": "viewsource",
+	"editorScript": "file:index.js",
+	"editorStyle": "file:index.css",
+	"style": "file:style-index.css"
+}
