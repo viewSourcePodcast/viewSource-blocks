@@ -22,6 +22,12 @@ function App() {
 
   // an update function
   function toggleButton() {
+    // if (isOpen) {
+    // 	setIsOpen(false);
+    // } else {
+    // 	setIsOpen(true);
+    // }
+    // or you can write it like this:
     setIsOpen(!isOpen);
   }
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
