@@ -6,6 +6,12 @@ function App() {
 
 	// an update function
 	function toggleButton() {
+		// if (isOpen) {
+		// 	setIsOpen(false);
+		// } else {
+		// 	setIsOpen(true);
+		// }
+		// or you can write it like this:
 		setIsOpen(!isOpen);
 	}
 	return (
