@@ -51,7 +51,7 @@ function vs_add_accordion_scripts() {
 		true,
 	);
 
-	wp_enqueue_style( 'riwdemo-styles', get_stylesheet_directory_uri() . '/build/accordion/style-index.css', false, $asset_file['version'] );
+	wp_enqueue_style( 'vs-accordion-styles', get_stylesheet_directory_uri() . '/build/accordion/style-index.css', false, $asset_file['version'] );
 
 }
 add_action( 'wp_enqueue_scripts', 'vs_add_accordion_scripts' );
