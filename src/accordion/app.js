@@ -16,8 +16,22 @@ function App() {
 	}
 	return (
 		<>
-			<button onClick={toggleButton}>Hello</button>
-			{isOpen && <p>World</p>}
+			<h2>
+				<button 
+					id="vs-accordion-button"
+					onClick={toggleButton}
+					aria-expanded={isOpen}
+					aria-controls="vs-accordion-panel"
+				>
+					Hello World
+				</button>
+			</h2>
+			{
+				isOpen && 
+				<div id="vs-accordion-panel" aria-labelledby="#vs-accordion-button">
+					<p>Lorem ipsum dolor sit <a href="https://example.com">amet eu magna</a> phasellus luctus viverra cras rhoncus eiusmod. Blandit adipiscing neque pharetra etiam venenatis dui pulvinar elementum laoreet do eleifend lobortis.</p>
+				</div>
+			}
 		</>
 	);
 }
