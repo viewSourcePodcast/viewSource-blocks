@@ -2,36 +2,39 @@
 import { useState } from "@wordpress/element";
 
 function App() {
-	const [isOpen, setIsOpen] = useState(false);
+	const [isExpanded, setIsExpanded] = useState(false);
 
 	// an update function
 	function toggleButton() {
-		// if (isOpen) {
-		// 	setIsOpen(false);
+		// if (isExpanded) {
+		// 	setIsExpanded(false);
 		// } else {
-		// 	setIsOpen(true);
+		// 	setIsExpanded(true);
 		// }
 		// or you can write it like this:
-		setIsOpen(!isOpen);
+		setIsExpanded(!isExpanded);
 	}
 	return (
 		<>
 			<h2>
-				<button 
+				<button
 					id="vs-accordion-button"
 					onClick={toggleButton}
-					aria-expanded={isOpen}
-					aria-controls="vs-accordion-panel"
-				>
+					aria-expanded={isExpanded}
+					aria-controls="vs-accordion-panel">
 					Hello World
 				</button>
 			</h2>
-			{
-				isOpen && 
+			{isExpanded && (
 				<div id="vs-accordion-panel" aria-labelledby="#vs-accordion-button">
-					<p>Lorem ipsum dolor sit <a href="https://example.com">amet eu magna</a> phasellus luctus viverra cras rhoncus eiusmod. Blandit adipiscing neque pharetra etiam venenatis dui pulvinar elementum laoreet do eleifend lobortis.</p>
+					<p>
+						Lorem ipsum dolor sit{" "}
+						<a href="https://example.com">amet eu magna</a> phasellus luctus
+						viverra cras rhoncus eiusmod. Blandit adipiscing neque pharetra
+						etiam venenatis dui pulvinar elementum laoreet do eleifend lobortis.
+					</p>
 				</div>
-			}
+			)}
 		</>
 	);
 }
