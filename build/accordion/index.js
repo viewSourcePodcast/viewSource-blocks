@@ -37,7 +37,7 @@ function App() {
     "aria-controls": "vs-accordion-panel"
   }, "Hello World")), isExpanded && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     id: "vs-accordion-panel",
-    "aria-labelledby": "#vs-accordion-button"
+    "aria-labelledby": "vs-accordion-button"
   }, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", null, "Lorem ipsum dolor sit", " ", (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("a", {
     href: "https://example.com"
   }, "amet eu magna"), " phasellus luctus viverra cras rhoncus eiusmod. Blandit adipiscing neque pharetra etiam venenatis dui pulvinar elementum laoreet do eleifend lobortis.")));

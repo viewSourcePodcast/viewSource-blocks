@@ -26,7 +26,7 @@ function App() {
 				</button>
 			</h2>
 			{isExpanded && (
-				<div id="vs-accordion-panel" aria-labelledby="#vs-accordion-button">
+				<div id="vs-accordion-panel" aria-labelledby="vs-accordion-button">
 					<p>
 						Lorem ipsum dolor sit{" "}
 						<a href="https://example.com">amet eu magna</a> phasellus luctus
