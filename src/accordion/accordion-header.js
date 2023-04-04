@@ -4,6 +4,7 @@
  * @return {string}
  */
 function AccordionHeader({expand, isExpanded, heading, id}) {
+	// Return the Accordion Header
 	return(
 		<h2>
 			<button

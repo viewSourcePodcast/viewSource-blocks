@@ -1,13 +1,13 @@
 // import useState from wordpress/element
 import { useState } from "@wordpress/element";
 
-import Accordion from "./accordion";
+import AccordionItem from "./accordion-item";
 
 
 function App() {
 
-	// Populate our default accordion data.
-	const [accordions, setAccordions] = useState([
+	// Set our default accordion data.
+	const accordions = [
 		{
 			id: 0,
 			heading: "Hello World",
@@ -23,21 +23,34 @@ function App() {
 			heading: "Hello World",
 			content: "Lorem ipsum dolor sit amet eu magna phasellus luctus viverra cras rhoncus eiusmod. Blandit adipiscing neque pharetra etiam venenatis dui pulvinar elementum laoreet do eleifend lobortis."
 		}
-	]);
+	];
 
 	// Set the active accordion.
-	const [activeId, setActiveId] = useState(0);
+	const [activeId, setActiveId] = useState(null);
 
+	// Handle the accordion expand event.
 	function expand( accordion ){
-		setActiveId(accordion.id);
+		// Example 1: Just set the active accordion.
+		// setActiveId(accordion.id);
+
+		// Example 2: Toggle the active accordion.
+		setActiveId(activeId === accordion.id ? null : accordion.id);
+
+		// Example 3: Toggle the active accordion (verbose edition).
+		// if (activeId === accordion.id) {
+		// 	setActiveId(null);
+		// } else {
+		// 	setActiveId(accordion.id);
+		// }
 	}
 
 
+	// Return the Accordion Items
 	return (
 		<>
 			{
 				accordions.map((accordion) => {
-					return <Accordion 
+					return <AccordionItem 
 						accordion={accordion} 
 						activeId={activeId} 
 						isExpanded={activeId === accordion.id}

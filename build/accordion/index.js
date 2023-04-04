@@ -27,6 +27,7 @@ function AccordionHeader(_ref) {
     heading,
     id
   } = _ref;
+  // Return the Accordion Header
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("h2", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("button", {
     id: `vs-accordion-button-${id}`,
     onClick: expand,
@@ -35,6 +36,57 @@ function AccordionHeader(_ref) {
   }, heading));
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AccordionHeader);
+
+/***/ }),
+
+/***/ "./src/accordion/accordion-item.js":
+/*!*****************************************!*\
+  !*** ./src/accordion/accordion-item.js ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
+/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _accordion_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./accordion-header.js */ "./src/accordion/accordion-header.js");
+/* harmony import */ var _accordion_panel_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./accordion-panel.js */ "./src/accordion/accordion-panel.js");
+
+
+
+
+/**
+ * Accordion Component
+ *
+ * @return {string}
+ */
+function AccordionItem(_ref) {
+  let {
+    accordion,
+    isExpanded,
+    expand
+  } = _ref;
+  // Desctructure the accordion object
+  const {
+    heading,
+    content,
+    id
+  } = accordion;
+
+  // Return the Accordion Header and Panel
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_accordion_header_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    expand: expand,
+    isExpanded: isExpanded,
+    heading: heading,
+    id: id
+  }), isExpanded && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_accordion_panel_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    content: content,
+    id: id
+  }));
+}
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AccordionItem);
 
 /***/ }),
 
@@ -61,60 +113,13 @@ function AccordionPanel(_ref) {
     content,
     id
   } = _ref;
+  // Return the Accordion Panel
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     id: `vs-accordion-panel-${id}`,
     "aria-labelledby": `vs-accordion-button-${id}`
   }, content);
 }
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (AccordionPanel);
-
-/***/ }),
-
-/***/ "./src/accordion/accordion.js":
-/*!************************************!*\
-  !*** ./src/accordion/accordion.js ***!
-  \************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
-/* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _accordion_header_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./accordion-header.js */ "./src/accordion/accordion-header.js");
-/* harmony import */ var _accordion_panel_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./accordion-panel.js */ "./src/accordion/accordion-panel.js");
-
-
-
-
-/**
- * Accordion Component
- *
- * @return {string}
- */
-function Accordion(_ref) {
-  let {
-    accordion,
-    isExpanded,
-    expand
-  } = _ref;
-  const {
-    heading,
-    content,
-    id
-  } = accordion;
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_accordion_header_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    expand: expand,
-    isExpanded: isExpanded,
-    heading: heading,
-    id: id
-  }), isExpanded && (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_accordion_panel_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
-    content: content,
-    id: id
-  }));
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Accordion);
 
 /***/ }),
 
@@ -130,14 +135,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/element */ "@wordpress/element");
 /* harmony import */ var _wordpress_element__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _accordion__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./accordion */ "./src/accordion/accordion.js");
+/* harmony import */ var _accordion_item__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./accordion-item */ "./src/accordion/accordion-item.js");
 
 // import useState from wordpress/element
 
 
 function App() {
-  // Populate our default accordion data.
-  const [accordions, setAccordions] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)([{
+  // Set our default accordion data.
+  const accordions = [{
     id: 0,
     heading: "Hello World",
     content: "Lorem ipsum dolor sit amet eu magna phasellus luctus viverra cras rhoncus eiusmod. Blandit adipiscing neque pharetra etiam venenatis dui pulvinar elementum laoreet do eleifend lobortis."
@@ -149,15 +154,30 @@ function App() {
     id: 2,
     heading: "Hello World",
     content: "Lorem ipsum dolor sit amet eu magna phasellus luctus viverra cras rhoncus eiusmod. Blandit adipiscing neque pharetra etiam venenatis dui pulvinar elementum laoreet do eleifend lobortis."
-  }]);
+  }];
 
   // Set the active accordion.
-  const [activeId, setActiveId] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(0);
+  const [activeId, setActiveId] = (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.useState)(null);
+
+  // Handle the accordion expand event.
   function expand(accordion) {
-    setActiveId(accordion.id);
+    // Example 1: Just set the active accordion.
+    // setActiveId(accordion.id);
+
+    // Example 2: Toggle the active accordion.
+    setActiveId(activeId === accordion.id ? null : accordion.id);
+
+    // Example 3: Toggle the active accordion (verbose edition).
+    // if (activeId === accordion.id) {
+    // 	setActiveId(null);
+    // } else {
+    // 	setActiveId(accordion.id);
+    // }
   }
+
+  // Return the Accordion Items
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, accordions.map(accordion => {
-    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_accordion__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_accordion_item__WEBPACK_IMPORTED_MODULE_1__["default"], {
       accordion: accordion,
       activeId: activeId,
       isExpanded: activeId === accordion.id,

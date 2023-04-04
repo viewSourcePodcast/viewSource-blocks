@@ -6,8 +6,12 @@ import AccordionPanel from './accordion-panel.js'
  *
  * @return {string}
  */
-function Accordion({accordion, isExpanded, expand}) {
+function AccordionItem({accordion, isExpanded, expand}) {
+
+	// Desctructure the accordion object
 	const {heading, content, id} = accordion;
+
+	// Return the Accordion Header and Panel
 	return (
 		<>
 			<AccordionHeader
@@ -23,4 +27,4 @@ function Accordion({accordion, isExpanded, expand}) {
 	)
 }
 
-export default Accordion;
+export default AccordionItem;
