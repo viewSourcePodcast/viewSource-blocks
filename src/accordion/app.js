@@ -1,40 +1,49 @@
 // import useState from wordpress/element
 import { useState } from "@wordpress/element";
 
-function App() {
-	const [isExpanded, setIsExpanded] = useState(false);
+import Accordion from "./accordion";
 
-	// an update function
-	function toggleButton() {
-		// if (isExpanded) {
-		// 	setIsExpanded(false);
-		// } else {
-		// 	setIsExpanded(true);
-		// }
-		// or you can write it like this:
-		setIsExpanded(!isExpanded);
+
+function App() {
+
+	// Populate our default accordion data.
+	const [accordions, setAccordions] = useState([
+		{
+			id: 0,
+			heading: "Hello World",
+			content: "Lorem ipsum dolor sit amet eu magna phasellus luctus viverra cras rhoncus eiusmod. Blandit adipiscing neque pharetra etiam venenatis dui pulvinar elementum laoreet do eleifend lobortis."
+		},
+		{
+			id: 1,
+			heading: "Hello World",
+			content: "Lorem ipsum dolor sit amet eu magna phasellus luctus viverra cras rhoncus eiusmod. Blandit adipiscing neque pharetra etiam venenatis dui pulvinar elementum laoreet do eleifend lobortis."
+		},
+		{
+			id: 2,
+			heading: "Hello World",
+			content: "Lorem ipsum dolor sit amet eu magna phasellus luctus viverra cras rhoncus eiusmod. Blandit adipiscing neque pharetra etiam venenatis dui pulvinar elementum laoreet do eleifend lobortis."
+		}
+	]);
+
+	// Set the active accordion.
+	const [activeId, setActiveId] = useState(0);
+
+	function expand( accordion ){
+		setActiveId(accordion.id);
 	}
+
+
 	return (
 		<>
-			<h2>
-				<button
-					id="vs-accordion-button"
-					onClick={toggleButton}
-					aria-expanded={isExpanded}
-					aria-controls="vs-accordion-panel">
-					Hello World
-				</button>
-			</h2>
-			{isExpanded && (
-				<div id="vs-accordion-panel" aria-labelledby="vs-accordion-button">
-					<p>
-						Lorem ipsum dolor sit{" "}
-						<a href="https://example.com">amet eu magna</a> phasellus luctus
-						viverra cras rhoncus eiusmod. Blandit adipiscing neque pharetra
-						etiam venenatis dui pulvinar elementum laoreet do eleifend lobortis.
-					</p>
-				</div>
-			)}
+			{
+				accordions.map((accordion) => {
+					return <Accordion 
+						accordion={accordion} 
+						activeId={activeId} 
+						isExpanded={activeId === accordion.id}
+						expand={() => expand(accordion)} />
+				})
+			}
 		</>
 	);
 }
