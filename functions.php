@@ -24,28 +24,6 @@ function register_acf_blocks() {
 
 add_action( 'init', 'register_acf_blocks' );
 
-/**
- * Enqueue a script to the frontend of WordPress
- *
- * @return void
- */
-function vs_add_accordion_scripts() {
-
-	$asset_file = include get_stylesheet_directory() . '/build/accordion/index.asset.php';
-	$dependencies = $asset_file['dependencies'];
-	wp_enqueue_script(
-		'vs-accordion-script',
-		get_stylesheet_directory_uri() . '/build/accordion/index.js',
-		$dependencies,
-		$asset_file['version'],
-		true,
-	);
-
-	wp_enqueue_style( 'vs-accordion-styles', get_stylesheet_directory_uri() . '/build/accordion/style-index.css', false, $asset_file['version'] );
-
-}
-add_action( 'wp_enqueue_scripts', 'vs_add_accordion_scripts' );
-
 
 // add an acf options page called Custom Date inside the Posts menu on init
 function vs_custom_date_options_page() {
@@ -97,8 +75,7 @@ function vs_custom_date_info ( $content ) {
 		}
 
 		$content = $date . $content;
-
-
+		xdebug_print_function_stack( $content );
 	}
 
 	return $content;
