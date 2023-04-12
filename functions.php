@@ -60,7 +60,7 @@ function vs_custom_date_info( $content ) {
 		// get the modified date from the post
 		$post_modified_date = get_the_modified_date( 'F j, Y', $post_id );
 		// get the custom date options
-		$custom_date = get_field( 'date_labels' );
+		$custom_date = get_field( 'date_labels', 'option' );
 
 		$date = '';
 
@@ -68,7 +68,7 @@ function vs_custom_date_info( $content ) {
 			$day         = $value['day'];
 			$date_output = 'published' === $value['date_output'] ? $post_date : $post_modified_date;
 			$custom      = 'custom' === $date_output ? $value['custom'] : false;
-			if ( $day === date( 'N' ) && get_the_date( 'N', $post_id ) === date( 'N' ) ) {
+			if ( gmdate( 'N' ) === $day && get_the_date( 'N', $post_id ) === gmdate( 'N' ) ) {
 
 				$date = sprintf( '<p class="custom-date-section">%s</p>', $custom ? $custom : $date_output );
 			}
