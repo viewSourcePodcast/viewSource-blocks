@@ -30,14 +30,14 @@ function vs_custom_date_options_page() {
 	if ( function_exists( 'acf_add_options_page' ) ) {
 		acf_add_options_page(
 			array(
-				'page_title' => 'Custom Date',
-				'menu_title' => 'Custom Date',
-				'menu_slug'  => 'custom-date',
-				'capability' => 'edit_posts',
+				'page_title'  => 'Custom Date',
+				'menu_title'  => 'Custom Date',
+				'menu_slug'   => 'custom-date',
+				'capability'  => 'edit_posts',
 				'parent_slug' => 'edit.php',
-				'position'   => 20,
-				'icon_url'   => 'dashicons-calendar-alt',
-				'redirect'   => false,
+				'position'    => 20,
+				'icon_url'    => 'dashicons-calendar-alt',
+				'redirect'    => false,
 			)
 		);
 	}
