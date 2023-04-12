@@ -52,7 +52,7 @@ add_action( 'init', 'vs_custom_date_options_page' );
  * @param string $content
  * @return string $content
  */
-function vs_custom_date_info ( $content ) {
+function vs_custom_date_info( $content ) {
 	if ( is_single() ) {
 		$post_id = get_the_ID();
 		// get the date from the post
