@@ -75,7 +75,7 @@ function vs_custom_date_info ( $content ) {
 		}
 
 		$content = $date . $content;
-		xdebug_print_function_stack( $content );
+
 	}
 
 	return $content;
