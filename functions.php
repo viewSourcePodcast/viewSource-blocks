@@ -25,7 +25,11 @@ function register_acf_blocks() {
 add_action( 'init', 'register_acf_blocks' );
 
 
-// add an acf options page called Custom Date inside the Posts menu on init
+/**
+ * Register ACF Options Page for Custom Date stuff
+ *
+ * @return void
+ */
 function vs_custom_date_options_page() {
 	if ( function_exists( 'acf_add_options_page' ) ) {
 		acf_add_options_page(
@@ -43,8 +47,6 @@ function vs_custom_date_options_page() {
 	}
 }
 add_action( 'init', 'vs_custom_date_options_page' );
-
-
 
 /**
  * Add a custom date to the content of the post
