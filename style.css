@@ -13,3 +13,9 @@ Text Domain:	 viewsource-blocks
 /*
     Add your custom styles here
 */
+
+.custom-date-section {
+	border: 1px solid #71b7b0;
+	padding: 1rem;
+	text-align: center;
+}
