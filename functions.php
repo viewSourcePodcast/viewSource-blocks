@@ -60,7 +60,7 @@ function vs_custom_date_info( $content ) {
 		// get the modified date from the post
 		$post_modified_date = get_the_modified_date( 'F j, Y', $post_id );
 		// get the custom date options
-		$custom_date = get_field( 'date_labels', 'option' );
+		$custom_date = get_field( 'date_labels' );
 
 		$date = '';
 
