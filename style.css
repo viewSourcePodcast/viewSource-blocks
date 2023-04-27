@@ -13,3 +13,11 @@ Text Domain:	 viewsource-blocks
 /*
     Add your custom styles here
 */
+
+.site-footer {
+	padding: 1rem;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	text-align: center;
+}
