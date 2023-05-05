@@ -41,15 +41,15 @@
 			<?php block_footer_area(); ?>
 			<div class="svg">
 				<?php
-				echo get_svg( // phpcs:ignore WordPress.Security.EscapeOutput
-					'viewsource-mark',
-					array(
-						'class'  => 'site-footer__viewsource-mark',
-						'height' => '',
-						'width'  => '200px',
-					)
-				);
-				?>
+					echo get_svg( // phpcs:ignore WordPress.Security.EscapeOutput
+						'viewsource-mark',
+						array(
+							'class'  => 'site-footer__viewsource-mark',
+							'height' => '',
+							'width'  => '200px',
+						)
+					);
+					?>
 			</div>
 		</footer>
 	</div>
