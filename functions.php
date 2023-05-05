@@ -61,7 +61,7 @@ function get_svg( $filename, $attributes = array(), $directory = 'assets/imgs' )
 			'svg_file_not_found',
 			$svg_error_message,
 			array(
-				'svg_file' => $filename . '.svg',
+				'svg_file'      => $filename . '.svg',
 				'svg_directory' => $directory,
 			)
 		);
@@ -74,6 +74,7 @@ function get_svg( $filename, $attributes = array(), $directory = 'assets/imgs' )
 	$update_svg->next_tag();
 
 	// If there are attributes to add, add them.
+	// TODO check if the tag we're working on is an SVG tag, if not, return a WP_Error object.
 	if ( ! empty( $attributes ) ) {
 		foreach ( $attributes as $attribute => $value ) {
 			// If the attribute is 'class', add the class to the SVG file without overwriting the existing classes.
