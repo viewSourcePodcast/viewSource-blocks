@@ -6,6 +6,9 @@
   display: flex;
   justify-content: space-between;
 }
+.wp-block-viewsource-accordion-item-flexible .wp-block-viewsource-accordion-item-flexible__title span {
+  width: 100%;
+}
 .wp-block-viewsource-accordion-item-flexible .wp-block-viewsource-accordion-item-flexible__title::after {
   content: "▶";
   transition: all 300ms ease;

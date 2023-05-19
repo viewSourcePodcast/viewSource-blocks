@@ -3,6 +3,9 @@
 		text-align: left;
 		display: flex;
 		justify-content: space-between;
+		span {
+			width: 100%;
+		}
 		&::after {
 			content: "▶";
 			transition: all 300ms ease;
