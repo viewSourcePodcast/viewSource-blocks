@@ -50,12 +50,8 @@ __webpack_require__.r(__webpack_exports__);
 /**
  * Internal Dependencies
  */
-const BLOCK_TEMPLATE = [["core/group", {
-  placeholder: "Add information here.",
-  "lock": {
-    "remove": true,
-    "move": true
-  }
+const BLOCK_TEMPLATE = [["core/paragraph", {
+  placeholder: "Add information here."
 }]];
 
 /**

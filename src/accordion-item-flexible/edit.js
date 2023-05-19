@@ -37,16 +37,9 @@ import HeadingLevelIcon from "./heading-levels";
  * Internal Dependencies
  */
 const BLOCK_TEMPLATE = [
-	[
-		"core/group",
-		{
-			placeholder: "Add information here.",
-			lock: {
-				remove: true,
-				move: true,
-			},
-		},
-	],
+	["core/paragraph", {
+		placeholder: "Add information here."
+	}],
 ];
 
 /**
