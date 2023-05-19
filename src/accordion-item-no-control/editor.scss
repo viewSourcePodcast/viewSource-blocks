@@ -2,6 +2,9 @@
 	.wp-block-viewsource-accordion-item-no-control__title {
 		display: flex;
 		justify-content: space-between;
+		span {
+			width: 100%;
+		}
 		&::after {
 			content: "▶";
 			transition: all 300ms ease;
