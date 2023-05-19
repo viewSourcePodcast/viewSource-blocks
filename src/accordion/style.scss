@@ -25,4 +25,11 @@
 			}
 		}
 	}
+	[id^="vs-accordion-panel-"] {
+		display: none;
+		&.is-expanded {
+			display: block;
+		}
+	}
+
 }

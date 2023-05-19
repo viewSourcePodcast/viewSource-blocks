@@ -1,15 +1,14 @@
-import AccordionHeader from './accordion-header.js'
-import AccordionPanel from './accordion-panel.js'
+import AccordionHeader from "./accordion-header.js";
+import AccordionPanel from "./accordion-panel.js";
 
 /**
  * Accordion Component
  *
  * @return {string}
  */
-function AccordionItem({accordion, isExpanded, expand}) {
-
+function AccordionItem({ accordion, isExpanded, expand }) {
 	// Desctructure the accordion object
-	const {heading, content, id} = accordion;
+	const { heading, content, id } = accordion;
 
 	// Return the Accordion Header and Panel
 	return (
@@ -20,11 +19,10 @@ function AccordionItem({accordion, isExpanded, expand}) {
 				heading={heading}
 				id={id}
 			/>
-			{isExpanded && (
-				<AccordionPanel content={content} id={id} />
-			)}
+
+			<AccordionPanel content={ content } id={ id } isExpanded={isExpanded}/>
 		</>
-	)
+	);
 }
 
 export default AccordionItem;

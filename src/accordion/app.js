@@ -50,11 +50,13 @@ function App() {
 		<>
 			{
 				accordions.map((accordion) => {
-					return <AccordionItem 
-						accordion={accordion} 
-						activeId={activeId} 
+					return <AccordionItem
+						accordion={accordion}
+						activeId={activeId}
 						isExpanded={activeId === accordion.id}
-						expand={() => expand(accordion)} />
+						expand={ () => expand(accordion) }
+						key={ accordion.id}
+					/>
 				})
 			}
 		</>

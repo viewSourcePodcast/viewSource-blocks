@@ -30,5 +30,11 @@
 #vs-accordion-root button[aria-expanded=true]::after {
   transform: rotate(90deg);
 }
+#vs-accordion-root [id^=vs-accordion-panel-] {
+  display: none;
+}
+#vs-accordion-root [id^=vs-accordion-panel-].is-expanded {
+  display: block;
+}
 
 /*# sourceMappingURL=style-index.css.map*/
