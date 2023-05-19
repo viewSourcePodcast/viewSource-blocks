@@ -1,0 +1,11 @@
+.wp-block-viewsource-accordion-item-flexible {
+	.wp-block-viewsource-accordion-item-flexible__title {
+		display: flex;
+		justify-content: space-between;
+		&::after {
+			content: "▶";
+			transition: all 300ms ease;
+			display: inline-block;
+		}
+	}
+}

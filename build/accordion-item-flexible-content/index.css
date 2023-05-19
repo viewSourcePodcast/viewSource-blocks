@@ -1,0 +1,16 @@
+/*!************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/accordion-item-flexible-content/editor.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.wp-block-viewsource-accordion-item-flexible-content .wp-block-viewsource-accordion-item-flexible-content__title {
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+}
+.wp-block-viewsource-accordion-item-flexible-content .wp-block-viewsource-accordion-item-flexible-content__title::after {
+  content: "▶";
+  transition: all 300ms ease;
+  display: inline-block;
+}
+
+/*# sourceMappingURL=index.css.map*/

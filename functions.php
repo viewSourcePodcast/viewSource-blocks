@@ -30,6 +30,9 @@ add_action( 'init', 'register_acf_blocks' );
 function register_native_blocks() {
 	register_block_type( __DIR__ . '/build/hello-world' );
 	register_block_type( __DIR__ . '/build/custom-hello-world' );
+	register_block_type( __DIR__ . '/build/accordion-item-no-control' );
+	register_block_type( __DIR__ . '/build/accordion-item-flexible-content' );
+	register_block_type( __DIR__ . '/build/accordion-item-flexible' );
 }
 add_action( 'init', 'register_native_blocks' );
 
@@ -54,4 +57,4 @@ function vs_add_accordion_scripts() {
 	wp_enqueue_style( 'vs-accordion-styles', get_stylesheet_directory_uri() . '/build/accordion/style-index.css', false, $asset_file['version'] );
 
 }
-add_action( 'wp_enqueue_scripts', 'vs_add_accordion_scripts' );
+// add_action( 'wp_enqueue_scripts', 'vs_add_accordion_scripts' );

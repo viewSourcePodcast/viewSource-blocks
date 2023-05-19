@@ -1,0 +1,28 @@
+{
+  "apiVersion": 2,
+  "name": "viewsource/accordion-item",
+  "title": "Accordion Item",
+  "category": "text",
+  "description": "A native block",
+  "textdomain": "viewsource",
+  "attributes": {
+    "id": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": [
+      "full"
+    ],
+    "color": {
+      "background": true,
+      "text": true
+    }
+  },
+  "editorScript": "file:index.js",
+  "editorStyle": "file:index.css",
+  "style": "file:style-index.css",
+  "render": "file:render.php"
+}

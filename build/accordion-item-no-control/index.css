@@ -1,0 +1,24 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[3].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[3].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[3].use[3]!./src/accordion-item-no-control/editor.scss ***!
+  \******************************************************************************************************************************************************************************************************************************************************************/
+@charset "UTF-8";
+.wp-block-viewsource-accordion-item-no-control .wp-block-viewsource-accordion-item-no-control__title {
+  display: flex;
+  justify-content: space-between;
+}
+.wp-block-viewsource-accordion-item-no-control .wp-block-viewsource-accordion-item-no-control__title::after {
+  content: "▶";
+  transition: all 300ms ease;
+  display: inline-block;
+}
+.wp-block-viewsource-accordion-item-no-control .wp-block-viewsource-accordion-item-no-control__content {
+  display: none;
+}
+.wp-block-viewsource-accordion-item-no-control.is-selected .wp-block-viewsource-accordion-item-no-control__title::after {
+  transform: rotate(90deg);
+}
+.wp-block-viewsource-accordion-item-no-control.is-selected .wp-block-viewsource-accordion-item-no-control__content {
+  display: block;
+}
+
+/*# sourceMappingURL=index.css.map*/

@@ -1,0 +1,25 @@
+.wp-block-viewsource-accordion-item {
+	h3 {
+		margin-bottom: 0;
+		display: flex;
+		justify-content: space-between;
+		&:after {
+			content: '+';
+			transition: 0.5s ease all;
+		}
+	}
+	& > .wp-block-group {
+		display: none;
+	}
+	&.is-selected, &.has-child-selected {
+		h3 {
+			&:after {
+				content: '-';
+				transition: 0.5s ease all;
+			}
+		}
+		& > .wp-block-group {
+			display: block;
+		}
+	}
+}
