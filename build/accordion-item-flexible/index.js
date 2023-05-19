@@ -446,7 +446,7 @@ module.exports = window["wp"]["i18n"];
   \************************************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"apiVersion":2,"name":"viewsource/accordion-item-flexible","title":"Accordion Item (Flexible)","category":"text","description":"An accordion item that gives you control over the accordion heading and panel content.","keywords":["viewsource"],"textdomain":"viewsource","attributes":{"headingLevel":{"type":"number","default":3},"title":{"type":"string","placeholder":"Accordion Item Title"},"id":{"type":"string","default":""}},"supports":{"html":false,"align":["wide"]},"editorScript":"file:index.js","editorStyle":"file:index.css","style":"file:style-index.css","viewScript":"file:view.js"}');
+module.exports = JSON.parse('{"apiVersion":2,"name":"viewsource/accordion-item-flexible","title":"Accordion Item (Flexible)","category":"text","description":"An accordion item that gives you control over the accordion heading and panel content.","keywords":["viewsource"],"textdomain":"viewsource","attributes":{"headingLevel":{"type":"number","default":3},"title":{"type":"string","placeholder":"Accordion Item Title"},"id":{"type":"string","default":""}},"supports":{"html":false,"align":["wide"],"color":{"background":true,"text":true,"link":true}},"editorScript":"file:index.js","editorStyle":"file:index.css","style":"file:style-index.css","viewScript":"file:view.js"}');
 
 /***/ })
 

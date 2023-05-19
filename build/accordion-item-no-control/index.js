@@ -310,7 +310,7 @@ module.exports = window["wp"]["i18n"];
   \**************************************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"apiVersion":2,"name":"viewsource/accordion-item-no-control","title":"Accordion Item (No Control)","category":"text","description":"An accordion item that gives you no control over the setup of the accordion.","keywords":["viewsource"],"textdomain":"viewsource","attributes":{"title":{"type":"string","placeholder":"Accordion Item Title"},"content":{"type":"string","placeholder":"Accordion Item Content"},"id":{"type":"string","default":""}},"supports":{"html":false,"align":["wide"]},"editorScript":"file:index.js","editorStyle":"file:index.css","style":"file:style-index.css","viewScript":"file:view.js"}');
+module.exports = JSON.parse('{"apiVersion":2,"name":"viewsource/accordion-item-no-control","title":"Accordion Item (No Control)","category":"text","description":"An accordion item that gives you no control over the setup of the accordion.","keywords":["viewsource"],"textdomain":"viewsource","attributes":{"title":{"type":"string","placeholder":"Accordion Item Title"},"content":{"type":"string","placeholder":"Accordion Item Content"},"id":{"type":"string","default":""}},"supports":{"html":false,"align":["wide"],"color":{"background":true,"text":true,"link":true}},"editorScript":"file:index.js","editorStyle":"file:index.css","style":"file:style-index.css","viewScript":"file:view.js"}');
 
 /***/ })
 

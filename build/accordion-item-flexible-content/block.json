@@ -22,7 +22,12 @@
     "html": false,
     "align": [
       "wide"
-    ]
+    ],
+    "color": {
+      "background": true,
+      "text": true,
+      "link": true
+    }
   },
   "editorScript": "file:index.js",
   "editorStyle": "file:index.css",
